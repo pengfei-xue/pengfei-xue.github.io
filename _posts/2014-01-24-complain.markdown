@@ -1,0 +1,53 @@
+---
+layout: post
+title: 'complain-about-golang'
+date: 2014-01-24
+author: Pengfei.X
+version: 0.1
+categories: [golang, ]
+excerpt: 用Go也有一段时间了，有一些感觉不怎么爽的地方，吐下槽
+---
+
+Go的执行效率不用多说了，相比Python，快了好几个数量级。其开发效率相比和Python差距
+也不是很大。我们内部也逐渐使用Go来进行开发，目前，使用最多的场景还是提供API，
+两三台机器可以支撑KW级别的PV。
+
+好了，开始吐槽。
+
+## 缺少官方库支持
+
+相比Py，Go缺少很多官方的库支持，比如MongoDB，MySQL。虽然Github上有一堆可以使用的
+库，而且已经在生产环境使用，但是，使用这些库，心里总有些不放心。我现在偏向于尽可能少
+地使用没有官方库支持的软件, 即使用，也会尽量去浏览一下代码，万一线上挂了，还能
+多少知道是为什么。
+
+## Error 机制
+
+查看Go代码，会发些很多检查Error的代码，不厌其烦地一遍一遍重复，实在感觉有点恶心。
+比如下面这段代码:
+
+    endpoint := beego.AppConfig.String("session_auth_endpoint")
+    req, err := http.NewRequest("GET", endpoint, nil)
+    if err != nil {
+        return false, err
+    }
+
+    req.Header.Add("X-Share-Session", s.Session)
+    req.Header.Add("X-BROWSER-BRANDING", "fine")
+
+    client := &http.Client{}
+    resp, err := client.Do(req)
+    if err != nil {
+        return false, err
+    }
+
+几乎每次调用都需要去检查一下，是否有Error发生，然后进行处理。虽然这样可以减少异常带来的
+危害，但是，隔两行就来一次检查，确实让我觉得很烦。有一些人的解决办法是，提供一个`checkerror`
+函数，然后，每次调用的时候，使用这个函数来检查error。当然，Python里面也是需要检查Exception的，
+可比较而言，感觉Go里面检查的次数远频繁于Py。
+
+## 包管理混乱
+
+有过一次这样的经历，升级一下框架，然后，应用挂了。Go目前还没有像Java那样，有类似Maven的包
+管理工具，包管理完全靠一些版本管理的软件支持。Go和Java在包的使用上有很多的相似之处，期待
+Google或者某个牛逼的厂商可以推出一个Maven For Go。
