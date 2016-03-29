@@ -5,6 +5,7 @@ date: 2016-03-27
 author: Pengfei.X
 version: 0.1
 categories: [ops, ]
+excerpt: 持续集成
 ---
 
 ## 构建基础
