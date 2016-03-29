@@ -8,3 +8,6 @@ github_username:  pengfei-xue
 
 # Build settings
 markdown: kramdown
+paginate: 5
+paginate_path: "/page:num/"
+gems: [jekyll-paginate]
