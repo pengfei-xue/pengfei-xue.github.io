@@ -12,3 +12,5 @@ paginate: 5
 paginate_path: "/page/:num"
 gems: [jekyll-paginate]
 permalink: /:year/:month/:day/:title
+highlighter: pygments
+relative_permalinks: true
