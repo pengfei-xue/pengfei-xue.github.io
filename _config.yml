@@ -1,7 +1,7 @@
 title: Pengfei.Xue
 email: pengphy@gmail.com
 description: ""
-baseurl: "https://pengfei-xue.github.io"
+baseurl: ""
 url: "https://pengfei-xue.github.com"
 twitter_username: pengphy
 github_username:  pengfei-xue
@@ -13,4 +13,3 @@ paginate_path: "/page/:num"
 gems: [jekyll-paginate]
 permalink: /:year/:month/:day/:title
 highlighter: pygments
-relative_permalinks: true
