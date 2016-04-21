@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'agile db development'
+title: 'agile db development with sqitch'
 date: 2016-04-21
 author: Pengfei.X
 version: 0.1
