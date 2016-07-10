@@ -1,0 +1,26 @@
+---
+layout: post
+title: 'spark初探填坑'
+date: 2016-06-23
+author: Pengfei.X
+version: 0.1
+categories: [spark, sbt]
+---
+
+
+## spark连接数据库时报错
+
+    spark java.sql.SQLException: No suitable driver
+
+解决办法:
+    
+    下载[mysql-connect-java](http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.18/mysql-connector-java-5.1.18.jar)
+
+然后执行:
+
+    spark-shell --driver-class-path /opt/spark/lib_managed/jars/mysql-connector-java-5.1.18.jar
+
+之后，在spark-shell中就可以正常连接数据了:
+
+    val url = "jdbc:mysql://ali.mysql.rds.aliyuncs.com/xz?user=w0rk&password=a0rkw0r1"
+    val df = sqlContext.read.format("jdbc").option("url", url).option("dbtable", "api_problem").load()
