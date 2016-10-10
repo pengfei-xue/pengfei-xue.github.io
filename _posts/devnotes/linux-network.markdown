@@ -29,3 +29,12 @@ However, nslookup will use the second nameserver if it receives a SERVFAIL from 
     (Default = nofail)
 
 [resolv.conf man page](https://linux.die.net/man/5/resolv.conf)
+
+
+## SSH access problem: debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY
+
+从ci ssh 到 backend.test 不成功 hang在 expecting SSH2_MSG_KEX_DH_GEX_REPLY
+
+    ip li set mtu 1400 dev wlan0
+
+https://serverfault.com/questions/210408/ssh-access-problem-debug1-expecting-ssh2-msg-kex-dh-gex-reply/676026#676026
