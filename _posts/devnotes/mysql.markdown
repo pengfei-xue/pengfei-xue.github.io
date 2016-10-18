@@ -19,3 +19,30 @@ All indexes other than the clustered index are known as secondary indexes. In In
 If the primary key is long, the secondary indexes use more space, so it is advantageous to have a short primary key.
 
 [Clustered and Secondary Indexes](https://dev.mysql.com/doc/refman/5.7/en/innodb-index-types.html)
+
+
+## How to change the default charset of a MySQL table?
+
+    ALTER TABLE etape_prospection CONVERT TO CHARACTER SET utf8;
+
+http://stackoverflow.com/questions/8906813/how-to-change-the-default-charset-of-a-mysql-table
+
+
+## 获取两个日期的天数差
+
+    SELECT DATEDIFF('2010-10-08 18:23:13', '2010-09-21 21:40:36') AS days;
+
+    +------+
+    | days |
+    +------+
+    |   17 |
+    +------+
+
+http://stackoverflow.com/questions/2546053/mysql-difference-between-two-timestamps-in-days
+
+
+## 在where条件中判断，日期是否在N天前/后
+
+    delete from appchecker_checkrecord where check_time <= curdate() - interval 5 day;
+
+http://dba.stackexchange.com/questions/60837/datediff-in-mysql
