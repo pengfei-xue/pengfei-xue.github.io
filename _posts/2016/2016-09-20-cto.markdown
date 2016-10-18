@@ -79,6 +79,8 @@ CTO要看清业务模式是运营主导还是技术主导。如果是前者，�
 
 ## 参考
 
+- [新创企业的CTO如何带技术团队走到C轮？](http://www.weixinnu.com/tag_article/2667043599#10006-weixin-1-52626-6b3bffd01fdde4900130bc5a2751b6d1)
+- [如何成为高效的CTO？](http://mp.weixin.qq.com/s?__biz=MzA4NTU2MTg3MQ==&mid=2655158837&idx=1&sn=572ba2115e35f011dbcf49e73aa35bd6&chksm=84602555b317ac43b9ace673e8a131ff7ad63823cdd5ea707699670223d6c0efc9534c1c0744&scene=0#rd)
 - [如何做好创业公司的CTO?](http://mp.weixin.qq.com/s?__biz=MzIzNzAyNzkxOA==&mid=2650523229&idx=1&sn=be634292323f99aeb56578709931e053&chksm=f0c1b17cc7b6386ac9cae2b6506785e1a8a2fe0b53ef5957ca9b7b1c033d0bb3ad97ba16616b&scene=0#rd)
 - [如何聪明地把工作分出去，并让别人做得比你更好？](http://mp.weixin.qq.com/s?__biz=MTQzMjE1NjQwMQ==&mid=2655536478&idx=3&sn=19a8996b12b5c2847e1027805d0b2414&chksm=66dfeac051a863d6b57e6e94634e40a2444b36b26a4523e1e500f0ca231d53f8273c26403a4a&scene=0#rd)
 - [团队里的聪明人重要，还是规范更重要？](http://mp.weixin.qq.com/s?__biz=MzA5OTE3ODUyOA==&mid=2650960591&idx=1&sn=df046f1d3ec48c39b9011c6879423d66&chksm=8b709380bc071a9664ee518a5faa9e09cc0e4240269c321c472da31bed3230b13dfeff4c1ef1&scene=0#rd)
