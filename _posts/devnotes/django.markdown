@@ -20,3 +20,13 @@ If you need to clear the query list manually at any point in your functions, jus
 
     from django.db import reset_queries
     reset_queries()
+
+
+## how to modify OneToOneField as inline for admin console?
+
+    class NotifyPolicyInlines(admin.StackedInline):
+        model = NotifyPolicy
+
+    class ServiceAdmin(ModelAdmin):
+        filter_horizontal = ('contacts', )
+        inlines = [NotifyPolicyInlines, ]

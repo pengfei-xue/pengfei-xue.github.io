@@ -1,0 +1,42 @@
+---
+layout: post
+title: '推荐系统初探'
+date: 2016-10-24
+author: Pengfei.X
+version: 0.1
+categories: [推荐系统,]
+---
+
+## 推荐系统评估
+
+- 推荐能吸引多少用户到详情页（赞，评论，浏览？）
+- 推荐能促使单个用户浏览更多的页面
+- 推荐的日记本，促使多少用户产生了购买行为
+
+## 用户行为
+
+所有用户
+- 浏览，搜索历史
+
+注册，登录用户
+- 赞，评论，购买，收藏，分享
+
+数据结构
+- 用户id
+- item id(日记，帖子，商品)
+- 行为类型
+- 行为具体内容（评论的内容，搜索的内容）
+- 上下文(时间，地点)
+
+
+## 训练数据集和测试数据集划分
+可以抽取线上有过行为的用户，获取(user，item，score，other_bla)类似的数据元，将这部分数据按照
+一定的规律，随机分配到两个集合中，作为训练集和测试集合(可以随机，或者按照时间来划分)，输入给推荐引擎，
+算法得出对应的模型后，用测试集的数据来测试训练出来的模型的准确率，召回率和新鲜度。
+
+
+## 参考
+[System Architectures for Personalization and Recommendation](http://techblog.netflix.com/2013/03/system-architectures-for.html)
+[An Inside Look at the Components of a Recommendation Engine](https://www.mapr.com/blog/inside-look-at-components-of-recommendation-engine)
+[recommender-system-algorithm-and-architecture](http://www.slideshare.net/xlvector/recommender-system-algorithm-and-architecture-13098396)
+[Building a Recommendation Engine - An example of a product recommendation engine](http://www.slideshare.net/NYCPredictiveAnalytics/building-a-recommendation-engine-an-example-of-a-product-recommendation-engine?next_slideshow=1)
