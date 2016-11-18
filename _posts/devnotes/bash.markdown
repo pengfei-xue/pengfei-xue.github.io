@@ -32,7 +32,21 @@
 
 [functions](http://tldp.org/LDP/abs/html/functions.html)
 
+## Automatic exit from bash shell script on error
 
+Use the set -e builtin:
+
+    #!/bin/bash
+    set -e
+
+Any subsequent commands which fail will cause the shell script to exit immediately
+Alternatively, you can pass -e on the command line:
+
+    bash -e my_script.sh
+
+You can also disable this behavior with set +e.
+
+[Automatic exit from bash shell script on error](http://stackoverflow.com/questions/2870992/automatic-exit-from-bash-shell-script-on-error)
 
 
 ## books

@@ -30,3 +30,21 @@ If you need to clear the query list manually at any point in your functions, jus
     class ServiceAdmin(ModelAdmin):
         filter_horizontal = ('contacts', )
         inlines = [NotifyPolicyInlines, ]
+
+## values/values_list 查询结果只返回特定字段
+
+Returns a QuerySet that returns dictionaries, rather than model instances, when used as an iterable.
+
+    # This list contains a Blog object.
+    >>> Blog.objects.filter(name__startswith='Beatles')
+    <QuerySet [<Blog: Beatles Blog>]>
+
+    # This list contains a dictionary.
+    >>> Blog.objects.filter(name__startswith='Beatles').values()
+    <QuerySet [{'id': 1, 'name': 'Beatles Blog', 'tagline': 'All the latest Beatles news.'}]>
+
+    >>> Entry.objects.values_list('id').order_by('id')
+    [(1,), (2,), (3,), ...]
+
+    >>> Entry.objects.values_list('id', flat=True).order_by('id')
+    [1, 2, 3, ...]
