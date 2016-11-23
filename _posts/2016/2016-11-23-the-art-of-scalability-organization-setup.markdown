@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '架构即未来 - 组织的设置'
-date: 2016-10-25
+date: 2016-11-23
 author: Pengfei.X
 version: 0.1
 categories: [reading,]
