@@ -1,3 +1,13 @@
+## add columns for big table
+
+- Create a new table (using the structure of the current table) with the new column(s) included.
+- execute a INSERT INTO new_table (column1,..columnN) SELECT (column1,..columnN) FROM current_table;
+- rename the current table
+- rename the new table using the name of the current table.
+
+[optimize mySql for faster alter table add column](http://stackoverflow.com/questions/5677932/optimize-mysql-for-faster-alter-table-add-column)
+
+
 ## Clustered and Secondary Indexes
 
 Every InnoDB table has a special index called the clustered index where the data for the rows is stored. Typically, the clustered index is synonymous with the primary key. To get the best performance from queries, inserts, and other database operations, you must understand how InnoDB uses the clustered index to optimize the most common lookup and DML operations for each table.

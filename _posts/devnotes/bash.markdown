@@ -1,3 +1,12 @@
+## sort numerically
+
+    sort -t '_' -k 2n
+
+    -t '_' (sets the delimiter to the underscore character)
+    -k 2n (sorts by the second column using numeric ordering)
+
+
+
 ## How to POST JSON data with Curl from Terminal/Commandline to Test Spring REST?
 
     curl -H "Content-Type: application/json" -X POST -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/api/login
