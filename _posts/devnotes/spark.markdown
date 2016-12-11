@@ -38,3 +38,13 @@ http://blog.csdn.net/zy_zhengyang/article/details/46853441
     PYSPARK_DRIVER_PYTHON=ipython pyspark --jars ../spark/jars/mysql-connector-java-5.1.40.jar --conf spark.sql.warehouse.dir=/data/warehouse.dir
 
 [Why does Spark report “java.net.URISyntaxException: Relative path in absolute URI” when working with DataFrames?](http://stackoverflow.com/questions/38940312/why-does-spark-report-java-net-urisyntaxexception-relative-path-in-absolute-ur)
+
+
+## datetime range filter in PySpark SQL
+
+    dates = ("2013-01-01",  "2015-07-01")
+    date_from, date_to = [to_date(lit(s)).cast(TimestampType()) for s in dates]
+
+    sf.where((sf.my_col > date_from) & (sf.my_col < date_to))
+
+[datetime range filter in PySpark SQL](http://stackoverflow.com/questions/31407461/datetime-range-filter-in-pyspark-sql)
