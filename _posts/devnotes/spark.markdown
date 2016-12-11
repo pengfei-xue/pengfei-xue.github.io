@@ -29,3 +29,12 @@ http://blog.csdn.net/zy_zhengyang/article/details/46853441
     PYSPARK_DRIVER_PYTHON=ipython /path/to/bin/pyspark
 
 [How to load IPython shell with PySpark](http://stackoverflow.com/questions/31862293/how-to-load-ipython-shell-with-pyspark)
+
+
+## Why does Spark report “java.net.URISyntaxException: Relative path in absolute URI” when working with DataFrames?
+
+    spark-shell --conf spark.sql.warehouse.dir=file:///c:/tmp/spark-warehouse
+
+    PYSPARK_DRIVER_PYTHON=ipython pyspark --jars ../spark/jars/mysql-connector-java-5.1.40.jar --conf spark.sql.warehouse.dir=/data/warehouse.dir
+
+[Why does Spark report “java.net.URISyntaxException: Relative path in absolute URI” when working with DataFrames?](http://stackoverflow.com/questions/38940312/why-does-spark-report-java-net-urisyntaxexception-relative-path-in-absolute-ur)
