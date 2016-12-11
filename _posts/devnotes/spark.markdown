@@ -22,3 +22,10 @@ textFile的参数是一个path,这个path可以是：
     sc.textFile("hdfs://n1:8020/user/hdfs/input/dt=20130728/hr=*/"),注意到hr=*,是一个模糊匹配的方式。
 
 http://blog.csdn.net/zy_zhengyang/article/details/46853441
+
+
+## How to load IPython shell with PySpark
+
+    PYSPARK_DRIVER_PYTHON=ipython /path/to/bin/pyspark
+
+[How to load IPython shell with PySpark](http://stackoverflow.com/questions/31862293/how-to-load-ipython-shell-with-pyspark)
