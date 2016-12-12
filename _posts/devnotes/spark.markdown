@@ -50,6 +50,13 @@ http://blog.csdn.net/zy_zhengyang/article/details/46853441
 [datetime range filter in PySpark SQL](http://stackoverflow.com/questions/31407461/datetime-range-filter-in-pyspark-sql)
 
 
+## '0000-00-00 00:00:00' can not be represented as java.sql.Timestamp error
+
+You can use this JDBC URL directly in your data source configuration:
+
+    jdbc:mysql://yourserver:3306/yourdatabase?zeroDateTimeBehavior=convertToNull
+
+
 ## Apache Spark: map vs mapPartitions?
 
 What's the difference between an RDD's map and mapPartitions method?
