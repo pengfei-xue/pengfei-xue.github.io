@@ -1,3 +1,12 @@
+## Create new column with function in Spark Dataframe
+    
+    import org.apache.spark.sql.functions._
+    val myDF = sqlContext.parquetFile("hdfs:/to/my/file.parquet")
+    val coder: (Int => String) = (arg: Int) => {if (arg < 100) "little" else "big"}
+    val sqlfunc = udf(coder)
+    myDF.withColumn("Code", sqlfunc(col("Amt")))
+
+
 ## Spark中加载本地（或者hdfs）文件以及SparkContext实例的textFile使用
 
 网上很多例子，包括官网的例子，都是用textFile来加载一个文件创建RDD，类似
