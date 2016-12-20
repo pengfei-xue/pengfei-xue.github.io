@@ -1,3 +1,14 @@
+## Best way to parse a URL query string
+
+  >>> from urlparse import urlparse, parse_qs
+  >>> URL='https://someurl.com/with/query_string?i=main&mode=front&sid=12ab&enc=+Hello'
+  >>> parsed_url = urlparse(URL)
+  >>> parse_qs(parsed_url.query)
+  {'i': ['main'], 'enc': [' Hello '], 'mode': ['front'], 'sid': ['12ab']}
+
+[modue six, urllib.parse](https://pythonhosted.org/six/#module-six.moves.urllib.parse)
+
+
 ## string format
 
     content = u'''

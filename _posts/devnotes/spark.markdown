@@ -1,3 +1,25 @@
+## How to get hadoop put to create directories if they don't exist
+
+    hadoop fs -mkdir -p <path>
+
+
+## Spark union of multiple RDDs
+
+    from functools import reduce  # For Python 3.x
+    from pyspark.sql import DataFrame
+
+    def unionAll(*dfs):
+        return reduce(DataFrame.unionAll, dfs)
+
+    df1 = sqlContext.createDataFrame([(1, "foo1"), (2, "bar1")], ("k", "v"))
+    df2 = sqlContext.createDataFrame([(3, "foo2"), (4, "bar2")], ("k", "v"))
+    df3 = sqlContext.createDataFrame([(5, "foo3"), (6, "bar3")], ("k", "v"))
+
+    unionAll(df1, df2, df3).show()
+
+[Spark union of multiple RDDs](http://stackoverflow.com/questions/33743978/spark-union-of-multiple-rdds)
+
+
 ## Create new column with function in Spark Dataframe
     
     import org.apache.spark.sql.functions._
