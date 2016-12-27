@@ -1,3 +1,13 @@
+## sbt 加速
+
+~/.sbt/repositories 文件，加入
+
+    [repositories]
+        local
+        aliyun: http://maven.aliyun.com/nexus/content/groups/public/
+        central: http://repo1.maven.org/maven2/
+
+
 ## How to read Scala command line arguments
 
     println("Hello, " + args(0))
