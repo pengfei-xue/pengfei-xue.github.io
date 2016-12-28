@@ -1,3 +1,37 @@
+## value toDF is not a member of org.apache.spark.rdd.RDD
+
+Import implicits: Note that this should be done only after an instance of
+org.apache.spark.sql.SQLContext is created. It should be written as:
+
+    val sqlContext= new org.apache.spark.sql.SQLContext(sc)
+    import sqlContext.implicits._
+
+[value toDF is not a member of org.apache.spark.rdd.RDD](http://stackoverflow.com/questions/33704831/value-todf-is-not-a-member-of-org-apache-spark-rdd-rdd)
+
+
+## How to convert rdd object to dataframe in spark (scala)
+
+SqlContext has a number of createDataFrame methods that create a DataFrame given an RDD.
+I imagine one of these will work for your context.
+
+For example:
+
+    def createDataFrame(rowRDD: RDD[Row], schema: StructType): DataFrame
+
+    // you should import implitcits after create a new SQLContext
+    val sqlContext = new SQLContext(sc)
+    import sqlContext.implicits._
+    rdd.toDF()
+
+    StructType(Seq(
+        StructField("request1", MapType(StringType, StringType, true), true),
+        StructField("response1", StringType, true)
+    ))
+
+[How to convert rdd object to dataframe in spark (scala)](http://stackoverflow.com/questions/29383578/how-to-convert-rdd-object-to-dataframe-in-spark)
+[Converting Map type in Case Class to StructField Type](http://stackoverflow.com/questions/34629493/converting-map-type-in-case-class-to-structfield-type)
+
+
 ## How to get hadoop put to create directories if they don't exist
 
     hadoop fs -mkdir -p <path>

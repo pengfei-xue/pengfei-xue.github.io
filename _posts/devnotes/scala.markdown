@@ -52,3 +52,39 @@ Your program would be invoked similar to this:
     )
 
 [different file contents found in the following](http://blog.csdn.net/oopsoom/article/details/41318599)
+
+
+## Include Dependencies in JAR using SBT package
+
+For sbt 0.13.6+ add sbt-assembly as a dependency in project/assembly.sbt:
+
+    addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.3")
+
+
+For example, here's a multi-project build.sbt:
+
+    lazy val commonSettings = Seq(
+      version := "0.1-SNAPSHOT",
+      organization := "com.example",
+      scalaVersion := "2.10.1",
+      test in assembly := {}
+    )
+
+    lazy val app = (project in file("app")).
+      settings(commonSettings: _*).
+      settings(
+        mainClass in assembly := Some("com.example.Main"),
+        // more settings here ...
+      )
+
+    lazy val utils = (project in file("utils")).
+      settings(commonSettings: _*).
+      settings(
+        assemblyJarName in assembly := "utils.jar",
+        // more settings here ...
+      )
+
+      sbt clean assembly // 打包
+
+[sbt-assembly](https://github.com/sbt/sbt-assembly)
+[how do I get sbt to gather all the jar files my code depends on into one place?](http://stackoverflow.com/questions/7979336/how-do-i-get-sbt-to-gather-all-the-jar-files-my-code-depends-on-into-one-place)
