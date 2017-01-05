@@ -1,3 +1,23 @@
+## What's the difference between select_related and prefetch_related in Django ORM?
+
+Your understanding is mostly correct. You use select_related when the object that you're
+going to be selecting is a single object, so OneToOneField or a ForeignKey.
+
+You use prefetch_related when you're going to get a "set" of things, so ManyToManyFields
+as you stated or reverse ForeignKeys. Just to clarify what I mean by "reverse ForeignKeys" here's an example:
+
+    class ModelA(models.Model):
+        pass
+
+    class ModelB(models.Model):
+        a = ForeignKey(ModelA)
+
+    ModelB.objects.select_related('a').all() # Forward ForeignKey relationship
+    ModelA.objects.prefetch_related('modelb_set').all() # Reverse ForeignKey relationship
+
+[What's the difference between select_related and prefetch_related in Django ORM?](http://stackoverflow.com/questions/31237042/whats-the-difference-between-select-related-and-prefetch-related-in-django-orm)
+
+
 ## How can I see the raw SQL queries Django is running?
 
 Make sure your Django DEBUG setting is set to True. Then, just do this:

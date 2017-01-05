@@ -9,6 +9,9 @@ categories: [reading,]
 
 [谈谈后端业务系统的微服务化改造](http://www.infoq.com/cn/articles/the-back-end-business-systems-service-transformation)
 [从单体架构迁移到微服务，8个关键的思考、实践和经验](http://www.infoq.com/cn/news/2016/08/Monomer-architecture-Micro-servi)
+[作为首席架构师，我是如何选择并落地架构方案的？](http://www.infoq.com/cn/articles/how-chief-architect-choose-architect)
+[极速发展的饿了么订单系统架构演进](http://www.infoq.com/cn/articles/eleme-order-system-architecture-evolution)
+[分库分表的几种常见形式以及可能遇到的难](http://www.infoq.com/cn/articles/key-steps-and-likely-problems-of-split-table)
 
 ## 问题
 
