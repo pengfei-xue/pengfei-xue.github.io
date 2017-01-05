@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'git note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## How to .gitignore all files/folder in a folder, but not the folder itself?
 
 You can't commit empty folders in git. If you want it to show up, you need to

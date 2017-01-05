@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'bash note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## sort numerically
 
     sort -t '_' -k 2n

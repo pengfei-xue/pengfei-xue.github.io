@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'spark note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## value toDF is not a member of org.apache.spark.rdd.RDD
 
 Import implicits: Note that this should be done only after an instance of

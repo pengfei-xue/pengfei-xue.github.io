@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'golang note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## go by example
 
     https://gobyexample.com/

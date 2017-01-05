@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'mysql note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## add columns for big table
 
 - Create a new table (using the structure of the current table) with the new column(s) included.

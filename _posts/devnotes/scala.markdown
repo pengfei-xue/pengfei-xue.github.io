@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'scala note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## sbt 加速
 
 ~/.sbt/repositories 文件，加入

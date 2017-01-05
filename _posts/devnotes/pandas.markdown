@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'pandas note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## iter rows over dataframe
 
     >>> df = pd.DataFrame([[1, 1.5]], columns=['int', 'float'])

@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'django note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## What's the difference between select_related and prefetch_related in Django ORM?
 
 Your understanding is mostly correct. You use select_related when the object that you're

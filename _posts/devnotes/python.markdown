@@ -1,3 +1,14 @@
+---
+layout: post
+title: 'python note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
+
 ## Best way to parse a URL query string
 
   >>> from urlparse import urlparse, parse_qs

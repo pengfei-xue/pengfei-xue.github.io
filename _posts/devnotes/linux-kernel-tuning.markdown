@@ -1,3 +1,12 @@
+---
+layout: post
+title: 'linux kernel note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
 ## Check the open FD limit for a given process in Linux
 
 Count the entries in /proc/<pid>/fd/

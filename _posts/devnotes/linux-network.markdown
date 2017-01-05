@@ -1,3 +1,13 @@
+---
+layout: post
+title: 'linux network note'
+date: 2017-01-05
+author: Pengfei.X
+version: 0.1
+categories: [devnotes, ]
+---
+
+
 ## second nameserver in /etc/resolv.conf not picked up by wget
 
 The default behavior for resolv.conf and the resolver is to try the servers in the
