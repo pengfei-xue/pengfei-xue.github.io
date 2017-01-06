@@ -7,6 +7,17 @@ version: 0.1
 categories: [devnotes, ]
 ---
 
+## Scala partial functions
+
+  val fraction = new PartialFunction[Int, Int] {
+    def apply(d: Int) = 42 / d
+    def isDefinedAt(d: Int) = d != 0
+  }
+
+  List(41, "cat") map { case i: Int ⇒ i + 1 }
+
+[Scala partial functions](http://blog.bruchez.name/2011/10/scala-partial-functions-without-phd.html)
+
 
 ## sbt 加速
 
