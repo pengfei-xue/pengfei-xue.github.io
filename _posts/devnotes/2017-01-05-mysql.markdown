@@ -7,6 +7,13 @@ version: 0.1
 categories: [devnotes, ]
 ---
 
+## alter table add MULTIPLE columns
+
+    ALTER TABLE users
+    ADD COLUMN `count` SMALLINT(6) NOT NULL AFTER `lastname`,
+    ADD COLUMN `log` VARCHAR(12) NOT NULL AFTER `count`,
+    ADD COLUMN `status` INT(10) UNSIGNED NOT NULL AFTER `log`;
+
 
 ## add columns for big table
 
