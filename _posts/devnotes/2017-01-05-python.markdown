@@ -8,6 +8,26 @@ categories: [devnotes, ]
 ---
 
 
+## In Python, how do I determine if an object is iterable?
+
+  try:
+    some_object_iterator = iter(some_object)
+  except TypeError, te:
+    print some_object, 'is not iterable'
+
+  try:
+    _ = (e for e in my_object)
+  except TypeError:
+    print my_object, 'is not iterable'
+
+  import collections
+
+  if isinstance(e, collections.Iterable):
+    # e is iterable
+
+
+http://stackoverflow.com/questions/1952464/in-python-how-do-i-determine-if-an-object-is-iterable
+
 
 ## Best way to parse a URL query string
 
