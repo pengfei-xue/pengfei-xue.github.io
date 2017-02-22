@@ -7,6 +7,32 @@ version: 0.1
 categories: [devnotes, ]
 ---
 
+## log all sql queries
+
+    LOGGING = {
+        'version': 1,
+        'filters': {
+            'require_debug_true': {
+                '()': 'django.utils.log.RequireDebugTrue',
+            }
+        },
+        'handlers': {
+            'console': {
+                'level': 'DEBUG',
+                'filters': ['require_debug_true'],
+                'class': 'logging.StreamHandler',
+            }
+        },
+        'loggers': {
+            'django.db.backends': {
+                'level': 'DEBUG',
+                'handlers': ['console'],
+            }
+        }
+    }
+
+[log all sql queries](http://stackoverflow.com/questions/4375784/log-all-sql-queries)
+
 
 ## What's the difference between select_related and prefetch_related in Django ORM?
 
