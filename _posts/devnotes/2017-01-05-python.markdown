@@ -8,6 +8,12 @@ categories: [devnotes, ]
 ---
 
 
+## Display an image from a file in an IPython Notebook
+
+  from IPython.display import Image
+  Image(filename='test.png') 
+
+
 ## In Python, how do I determine if an object is iterable?
 
   try:
