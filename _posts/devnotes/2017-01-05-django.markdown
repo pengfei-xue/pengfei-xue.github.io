@@ -7,6 +7,33 @@ version: 0.1
 categories: [devnotes, ]
 ---
 
+
+## escape, unescape html entities
+
+HTML Escape
+
+    try:
+        from html import escape  # python 3.x
+    except ImportError:
+        from cgi import escape  # python 2.x
+
+    print(escape("<"))
+
+HTML Unescape
+
+    try:
+        from html import unescape  # python 3.4+
+    except ImportError:
+        try:
+            from html.parser import HTMLParser  # python 3.x (<3.4)
+        except ImportError:
+            from HTMLParser import HTMLParser  # python 2.x
+        unescape = HTMLParser().unescape
+
+    print(unescape("&gt;"))
+
+
+
 ## log all sql queries
 
     LOGGING = {
