@@ -1,45 +1,14 @@
-<!doctype html>
-<html xmlns:wb="http://open.weibo.com/wb">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Pengfei-xue.GitHub.io by pengfei-xue</title>
-
-    <link rel="stylesheet" href="https://pengfei-xue.gitHub.io/stylesheets/styles.css">
-    <link rel="stylesheet" href="https://pengfei-xue.gitHub.io/stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-  </head>
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Pengfei-xue.GitHub.io</h1>
-        <p>programming your life!</p>
-        <p class="view"><a href="/">Home ~/</a></p>
-        <p class="view"><a href="https://github.com/pengfei-xue">View My GitHub Profile</a></p>
-
-      </header>
-      <section>
-		<div class="content">
-            {{ content }}
-		</div>
-      </section>
-
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="https://pengfei-xue.gitHub.io/javascripts/scale.fix.js"></script>
-    <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-46633582-1', 'auto');
-	  ga('send', 'pageview');
-	</script>
+    <main class="wrapper">
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+    </main>
   </body>
 </html>
