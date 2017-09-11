@@ -45,7 +45,7 @@ CSRF TOKEN的函数：
 
     app.jinja_env.globals['csrf_token'] = generate_csrf_token
 
-在HTML模板中直接使用 `{{ csrf_token() }}`就可以生成CSRF TOKEN.
+在HTML模板中直接使用 `csrf_token()`就可以生成CSRF TOKEN.
 
 
 ### 获取model的表名, 对象的dict
