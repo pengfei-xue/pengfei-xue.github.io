@@ -7,9 +7,16 @@ twitter_username: pengphy
 github_username:  pengfei-xue
 
 # Build settings
-markdown: kramdown
-paginate: 5
+# permalink   : /:year/:title/
 paginate_path: "/page/:num"
-gems: [jekyll-paginate]
 permalink: /:year/:month/:day/:title
-highlighter: pygments
+markdown    : kramdown
+highlighter : rouge
+
+source: ./
+destination: ./_site
+
+# Sass configuration
+sass:
+  sass_dir: assets/scss
+  style: compressed # expanded
